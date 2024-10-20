@@ -1,0 +1,19 @@
+Commands for installing maven:
+wget https://archive.apache.org/dist/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
+tar -xvzf apache-maven-3.9.4-bin.tar.gz
+sudo mv apache-maven-3.9.4 /opt/maven
+nano ~/.bashrc
+export M2_HOME=/opt/maven
+export PATH=$M2_HOME/bin:$PATH
+source ~/.bashrc
+mvn -version
+
+Command for installing java -openjdk17:
+sudo yum install -y java-17-amazon-corretto-devel
+java -version
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto' >> ~/.bashrc
+echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto' >> ~/.bashrc
+echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
